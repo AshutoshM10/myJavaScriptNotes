@@ -1,76 +1,47 @@
-"use strict" // it treats the js code as newer version
-console.table([3+3, "Ashutosh", "ashutosh@gmail.com"]);
+"use strict"; // Enables strict mode to catch coding mistakes and improve code quality
+
+// Display data in a table format
+console.table([3 + 3, "Ashutosh", "ashutosh@gmail.com"]);
+
+// Display a simple message
 console.log("ashutosh");
 
-// --------- Primitive datatypes ------------------
-// numbers : both floats and integers are considered as numbers (range: 2 to 2^53)
-// string : patterns and names etc comes under this datatypes => ("String")
-// BigInt : Bahut bada numbers pain
-// boolean => true/false
-// null => standalone value (representation of an empty value)
-// undefined => it means i have created the variable, but have not defined the value.
-// symbol : Used to give an uniqueness to a code.
+// ---------------- Primitive Data Types ------------------
 
+// Numbers: Represents both floats and integers
+// String: Represents patterns, names, etc.
+// BigInt: Used for very large numbers
+// Boolean: Represents true or false
+// Null: Represents an empty value
+// Undefined: Represents a variable that has been declared but not defined
+// Symbol: Used to give uniqueness to a value
 
-// objects:
-// example:
-let a = 123
-console.log(typeof a)  // it will give integer type
-let name= "ashutosh"
-console.log(typeof name) // it will give string type;
-// console.log(typeof variable_names) // it gives the type of the variable. 
-console.log(Symbol('123'));  // Symbols are uniquely defined the variable as a unique.
+// Example of Symbol
+console.log(Symbol('123')); // Symbols are unique identifiers
 
-
-
-// example: 
+// Example: Comparing two Symbols
 let sym1 = Symbol('123');
 let sym2 = Symbol('123');
-if(sym1 === sym2){
-    console.log(true);
+if (sym1 === sym2) {
+    console.log(true); // This will not execute, Symbols are unique
 } else {
     console.log(false);
 }
-// the output will be false
 
+// ------------ Non-Primitive Data Types (Reference Types) ------------
 
+// Array: A list of values
+const heroes = ["Batman", "Iron man", "Chris Nolan"];
 
-
-
-// ---------- Non Primitive Datatypes (Reference types) -----------
-// Array : these are the list of objects. Which are defined inside square brackets []
-const heroes= ["Batman", "Iron man", "Chris Nolan"]
-
-// objects, : these are the key value pairs, which are defined inside curly braces {}
-/* 
-
-here **let myObj** is the variable in which we defined the object. 
-in words, We store the object in a variable. 
-
-*/
-let myObj = {
+// Objects: Key-value pairs enclosed in curly braces
+const myObj = {
     name: "Ashutosh",
     age: 23,
+};
 
-}
-console.log(myObj);
-
-// functions: 
-/* 
-
-Here Created the function and stored that inside a variable.
-const <function_name> ---> Variable
-function() {
-    this is the function.
-}
-
-
-
-
-*/
+// Functions: Blocks of reusable code
 const myFunction = function() {
-    console.log("hello world")
-}
-    console.log(typeof myFunction);  // it returns function. it is actually Object function
+    console.log("hello world");
+};
+console.log(typeof myFunction); // Functions are considered objects
 
-    

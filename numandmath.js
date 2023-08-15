@@ -1,78 +1,53 @@
-const score = 122; // javaScript is used to define the datatype automatically 
-console.log(score);  
+// Defining a variable 'score' with automatic type inference
+const score = 122;
+console.log("Score:", score);
 
-// but to define the datatype explicitely, we use 'new' key word
+// Defining a variable 'balance' with explicit type definition using 'new' keyword
+const balance = new Number(100);
+console.log("Balance:", balance);
 
-// syntax:   new <datatype>("value")
-const balance =  new Number(100)  // new keyword helps to define the datatype explicitely
-console.log('balance: ', balance);
+// Converting 'balance' to string using toString()
+console.log("Balance as string:", balance.toString());
 
-console.log(balance.toString()); 
-console.log(balance.toFixed(2));   
+// Rounding 'balance' to two decimal places using toFixed()
+console.log("Rounded balance:", balance.toFixed(2));
 
-/* 
-toFixed() allows allows you to format a number 
-to a specific number of decimal places
-*/
+// Displaying 'a' with precision of 4 decimal places using toPrecision()
+const a = 23.8988;
+console.log("Precision of 'a':", a.toPrecision(4));
 
+// Displaying 'b' with commas as thousands separators using toLocaleString()
+const b = 1000000;
+console.log("Formatted 'b':", b.toLocaleString('en-IN'));
 
-const a = 23.8988
-console.log(a.toPrecision(4));
-/* 
-Returns a string containing a number represented either in exponential or 
-fixed-point notation with a specified number of digits.
-*/
+// ++++++++++++++++ Math Functions ++++++++++++++++++
 
-const b = 1000000
-console.log(b.toLocaleString('en-IN'));  // vistarika sankhya pain, comma in every 1, 10, 100,100 and so on positions
+// Displaying the Math object
+console.log("Math object:", Math);
 
+// Absolute value using Math.abs()
+console.log("Absolute value of -4:", Math.abs(-4));
 
+// Rounding using Math.round()
+console.log("Rounded value of 4.2:", Math.round(4.2));
 
+// Ceiling value using Math.ceil()
+console.log("Ceiling value of 4.2:", Math.ceil(4.2));
 
+// Floor value using Math.floor()
+console.log("Floor value of 4.2:", Math.floor(4.2));
 
-// ++++++++++++++++ Maths ++++++++++++++++++
+// Square root using Math.sqrt()
+console.log("Square root of 4:", Math.sqrt(4));
 
-// math's lib comes to javaScript by default
-console.log(Math);
+// Finding the minimum value in an array using Math.min()
+let array = [1, 2, 3, 4, 5, 7];
+console.log("Minimum value in the array:", Math.min(...array));
 
-// Math.abs() -> absolute value
-console.log(Math.abs(-4));   // returns 4
-// Math.round() -> for round off values
-console.log(Math.round(4.2));
-// Math.ceil() -> for upper values while rounding off
-console.log(Math.ceil(4.2));
-// Math.floor() -> for lower values while rounding off
-console.log(Math.floor(4.2));
-// Math.sqrt() -> for square root of the values.
-console.log(Math.sqrt(4));
-// Math.min() -> for finding a lower value in the Array
-let array = [1,2,3,4,5,7]
-console.log(Math.min(...array)); 
-/* the spread operator (...) is used to pass the elements of 
-the array as separate arguments to the Math.min() function.
-*/
+// Finding the maximum value in an array using Math.max()
+console.log("Maximum value in the array:", Math.max(...array));
 
-// Math.max() -> used to find maximum value in an array
-console.log(Math.max(...array));
-// Math.random() -> for getting the value between 0 to 10 (mostly decimals)
-console.log(Math.random()); // it give random numbers mostly decimals. to get the roundoff value
-                            // we can use round(), min(), max()
-
-
-
-let min = 10
-let max = 20
-console.log(Math.floor(Math.random() * (max-min+1 + min)));
-/* 
-
-Math.random(): This gives you a random decimal number between 0 (inclusive) and 1 (exclusive). It's like rolling a random fraction.
-
-Range Calculation: (max - min + 1) calculates the range of possible values. The + 1 ensures the maximum value is included in the range.
-
-Scaling: Multiplying Math.random() by the range from step 2 gives you a random decimal number within that range.
-
-Math.floor(...): This rounds down the decimal number from step 3 to the nearest whole number. It's like removing the decimal part.
-
-Adding min: Adding min shifts the rounded number up by min units, effectively moving it into the desired range.
-
-*/
+// Generating a random integer between min and max using Math.random()
+let min = 10;
+let max = 20;
+console.log("Random integer between min and max:", Math.floor(Math.random() * (max - min + 1)) + min);
